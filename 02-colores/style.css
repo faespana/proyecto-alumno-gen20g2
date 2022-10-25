@@ -1,0 +1,65 @@
+/*El color transparent hace invisible un texto*/
+/*El color currentColor hace que se copie el color del padre mas cercano*/
+
+.caja1{
+    color: blue;
+    color: #ff0000;
+    color: #0000ff;
+    color: #00ff00;
+    /*    Red-Green-Blue   */
+
+    color: #f00;
+    color: #0f0;
+    color: #00f;
+
+    color: rgb(red, green, blue);
+
+    color: rgb(100%, 0%, 0%);
+    color: rgb(0%, 100%, 0%);
+    color: rgb(0%, 0%, 100%);
+
+    color: rgb(255, 0, 0);
+    color: rgb(0, 255, 0);
+    color: rgb(0, 0, 255);
+
+    color: rgb(229, 149, 21, 80%);  
+    
+    /*Estableces un tono, una saturacion y un brillo https://www.w3schools.com/colors/colors_hsl.asp*/
+    color: hsl(37, 93%, 54%);
+
+    --color-primary: 37;
+
+    color: hsl(var(--color-primary), 93%, 54%);
+
+    background-color: rgb(0, 162, 255);
+
+    border-width: 1px;
+
+    border-style: solid;
+
+    border-color: #0000ff;
+
+    /*Asi tambien se puede poner bordes como el de arriba*/
+
+    border: 5px solid blue;
+
+    border: 3px dashed green;
+
+    border-top-color: #f00;
+
+    /*Ponerle sombra al texto*/
+
+    text-shadow: 1px 1px 10px black;
+
+}
+
+.caja2{
+    background-color: #fff;
+    box-shadow: 0px 0px 25px 4px hsla(0, 0%, 0%, 0.22);
+    padding: 20px;
+    outline: 1px solid #00ff00;
+}
+
+
+
+

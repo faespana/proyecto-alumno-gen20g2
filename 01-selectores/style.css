@@ -1,0 +1,226 @@
+/*Cual es la utilidad de CSS (Cascading Style Sheets)*/
+    /*Hace que tu pagina se vea mas bonita mediante la aplicacion de estilos como: colores, formas, margenes, etc*/
+    /*HTML le da el esquema a la pagina, pero CSS lo finaliza y le da los toques finales*/
+
+/*Como es su estructura o regla?*/
+
+/*
+selector (elemento del html){
+    property: value;
+    property: value;
+}
+*/
+
+/*Selectores: Le indican al navegador que elemntos de HTML son seleccionados para que CSS aplique sus propiedades*/
+
+/*
+elemento (etiqueta o tipo).clases.#id[atributo]:pseudoclase::seudoelemnto{
+    property:value
+} 
+*/
+
+/*Selector de elemento.clase#id*/
+    /*Este grupo de selectores se delimitn con un elemento de HTML, por ejemplo el <h1>*/
+
+    /*Selector de Elemento:*/
+
+    /*background-color: Cambiar el color de fondo
+    color: Cambiar el color de las letras*/
+
+body{
+    background-color: #333; 
+    color: #fff;
+  } 
+
+h2{
+    color: lightgreen;
+}
+
+/*Selector de clase: Diferencia unas etiquetas de otros que tengan la misma propiedad*/
+    /*Ojo que las clases no son especificas de un elemento, pueden compartirse como en este ejemplo que tanto el parrafo del art1 y del art2*/
+    /*Una clase puede tener varios valores, por ejemplo el parrafo del art2 en la misma clase a parte del .text-primary, tiene .size-1 que le incrementa la letra, una clase puede tener varios valores*/
+
+.text-primary{
+    color: lightseagreen;
+    background-color: #222;
+}
+
+/*font-size: Incrementa el tamano de letra*/
+.size-1{
+    font-size: 20px;
+}
+
+/*Creacion de botones y sus propiedades en el html se cambio debajo del la seccion 1*/
+
+    /*
+    border: Sin bordes el boton
+    outline: delineado
+    border-radius: bordes redondeados de los botones
+    padding: es que tanto arriba y abajo van a tener 5px y a los lado 10px
+    */
+.btn{
+    background-color: #f5f5f5;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.btn-primary{
+    background-color: lightgreen;
+}
+
+.btn-danger{
+    background-color: lightcoral;
+}
+
+.btn-small{
+    font-size: 12px;
+}
+
+.btn-big{
+    font-size: 24px;
+}
+
+
+/*Solo los dos primeros botones tienen bordes a pesar que en el primer .btn se dijo que no tenia, inclusive el borde tambien aparece en el parrafo del articulo 1*/
+
+.border{
+    border: 1px solid #fff;
+}
+
+/*Se lo puso al ir arriba*/
+.btn-top{
+    color: lightgreen;
+}
+
+/*************************************************************************************************************************************/
+
+/*Selector identificador # hashcat: Este tipo de selector no se puede reutilizar como la clase solo debe haber un solo id (no son tan recomendados para css, pero si para JS)*/
+
+#titulo1{
+    color: aqua
+}
+
+/*como titulo1 es id del h3 seccion 1, al yo querer hacer todos los h3 rojos no se va a poder asi sea que haga al h3 una clase...esto es debido a la jerarquia (especificidad la especifidd de #titulo1 esd (1,0,0) mientras que la de h3 es de (0,0,1), ejm*/
+
+h3{
+    color:red
+}
+
+/**************************************************************************************************************************************/
+
+/*Selectores de atributo*/
+
+/*Esto hace que el fondo de la palabra selectores se haga negro*/
+[class="bg-darked"] {
+    background-color: #111;
+}
+
+/*Las navegaciones de arriba no sienten este cambio pues solo van a ser los enlaces que llevan a paginas externas, lo que es el motivo del traget="_blank"*/
+[target="_blank"]{
+    color: pink
+}
+
+/*Los pseudo elementos incrustan contenido antes o despues del elemento*/
+[target="_blank"]::after{
+    content: "⚜️"
+}
+
+/*Alterando el ir arriba*/
+.btn-top{
+    color: yellow;
+}
+
+.btn-top::after{
+    content: "🏋️‍♂️";
+} 
+
+/*Seudoclases cuando le pasamos e cursor por el botom vambia de color, le dimos interactividad*/
+
+.btn:hover{
+    background-color: #111;
+    color: #fff;
+}
+
+/*seudo elementos*/
+p:hover{
+    background-color: #111;
+    color: #fff;
+}
+
+/*Antes del texto del selector agrega un elemento*/
+h1::before{
+    content: "🐶";
+}
+
+/*Este selection es muy interesante puesto que al seleccionar las letras en lugar de hacerse azul, se hace rosado con letras negras*/
+::selection{
+    background-color: lightpink;
+    color: #000;
+}
+
+/***************************************************************************************************************************************/
+
+/*Cascada, Especificidad & Herencia*/
+
+/*Cascada: Significa que el orden de las cosas importan, cuando dos reglas tienen la misma especificidad, se aplica el ultimo lugar en el css*/
+
+/*A un elemento se le aplica una clase y un atributo su especificidad aumenta, se espera no alterar el flujo del css o cascada*/
+
+/*Herencia:No son a todas las propiedades, pero ciertas cosas se van heredando*/
+    /*Valores d propiedad que buscan que no se herede una propiedad*/
+
+        /*inherit: Establece que el valor de la propiedad que se aplica a un elemento determinado sea exactamente igual al del elemento padre*/
+
+        /*initial: Establece qye el valor de la propiedd que se aplique a un elemento seleccionado tenga el mismo valor que este establecido para esa propiedad*/
+
+        /*unset: Restablece la propiedad a su valor natural, lo que significa que si la propiedad se hereda de forma natural, actua como inherit y en caso contrario como initial*/
+
+/*Este ejemplo es para el primer articulo*/
+.articulo{
+    font-size: 24px;
+    border: 1px solid rgb(38, 0, 255);
+}
+
+/*Combinacion de selectores (no es recomendable, se le pone la clase a la p directamente) operadore sde combinacion descedentes*/
+
+/*El tipo de letra se hizo 16px al ponerle al font-size initial*/
+.articulo section p{
+    font-size: initial;
+    color: green;
+    border: inherit
+}
+
+/*operaodr de combianacion de elementos hijo*/
+
+.articulo > section > section > p {
+    color: red;
+}
+
+/*selecto universal se usa mas para quitar margenes y luego uno mismo ponerselo*/
+* {
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+h1,h2,h3,p {
+    margin: 16px 0;
+}
+
+.clase#identificador {
+    color: yellow;
+}
+
+/*Important rompe la especifidad*/
+h2 {
+    color:blue !important;
+}
+
+
+/*Ponerle estas propiedades a todo*/
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+}

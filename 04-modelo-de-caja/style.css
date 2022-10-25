@@ -1,0 +1,58 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/*Como funcionan juntas las partes de la caja: margen, borde, relleno, contenido*/
+    /*El borde y el relleno incrementan el tamano de la caja*/
+
+.caja1{
+        border: 5px solid red;
+        padding: 20px;
+        width: 150px;
+        height: 150px;
+        /*Le agrega un scroll automatico para ver el contenido encaso que se reduzca la caja*/
+        overflow: auto;
+        box-sizing: content-box;
+    }
+
+/*Manteniendo del tamano de la caja 200 * 200 no importa el padding y el borde*/
+
+.caja2{
+    border: 5px solid red;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.block-inline div{
+    border: 1px solid red;
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/*Los elementos en linea no tienen un ancho ni un largo*/
+
+.block-inline span{
+    border: 1px solid green;
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    padding-top: 50px;
+    /* margin-top: 500px;
+    margin-bottom: 500px; */
+    
+    /*Estas propiedades presentan lo mejor de los elementos inline y bloque*/
+    
+    display: inline;
+    display: inline-block;
+}

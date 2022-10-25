@@ -1,0 +1,77 @@
+/*Unidades Absolutas & Relativas*/
+    /*Absolutas: cm, mm, in, px*/
+    /*Relativas a los dispositivos en lo que estan (diseno responsivo): em, rem, vh*/
+
+/*Al colorcar y especificar el valor del tamano de letra 1rem va a equivaler a 16px*/
+html{
+    font-size: 16px;
+}    
+
+body{
+    margin: 0;
+}
+
+/* body{
+    /*Los navegadores toman en cuenta este tamano de pixel el 1rem se adapta a lo del navegador ya sea en celu, tablet, etc
+    font-size: 1rem;
+} */
+
+/* main{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1rem;
+} */
+
+/***************************************************************************/
+
+/* main{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1em;
+} */
+
+/*************************************************************************/
+
+/*El em tiene un efecto de cascadaque va incrementando el tamano de manera anidamiento, mientras que el rem es constantey se basa en el html*/
+
+/* li{
+    font-size: 1.5em;
+} */
+
+/* main{
+    border: 3px solid green;
+    width: 50%;
+} */
+
+/* p{
+    /*El parrafo ocupa el 25% del total de la pagina ya que el main esta al 50%
+    width: 50%;
+    border: 3px solid red;
+} */
+
+/* p{
+    /*El parrafo ocupa el 25% del total de la pagina ya que el main esta al 50%*/
+    /*width: 50%;
+    /*Este vw rompe las reglas del anidamiento
+    width: 100vw;
+    border: 3px solid red;
+} */
+
+/*************************************************************************/
+
+main{
+    border-style: solid;
+    border-color: green;
+    width: 100%;
+}
+
+p{
+    border: 3px solid red;
+    width: 100%;
+    height: 100vh;
+}
+

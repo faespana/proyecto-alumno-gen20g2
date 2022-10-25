@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jesús Fernández">
+  <meta name="description" content="Fundamentos del desarrollo web | CSS3">
+  <link rel="stylesheet" href="style.css"> <!--Si este link esta debajo de style en html entonces considera lo del css y no el style-->
+  <title>Introducción a CSS | Selectores</title>
+
+<!--<style>
+      body{
+        background-color: black;
+        color: white;
+    </style>
+} ESTO NO ES RECOMENDABLE PUESTO Q EL HTML SE PODRIA HACER MUY EXTENSO Y OJO QUE ESTE TIENE PRIORIDAD ANTE EL CSS, pero esto sucede porque el style esta por debajo del link del css, si fuera lo contrario el css tuviera prioridad-->
+    
+</head>
+
+<body>
+
+  <header class="bg-darked">
+    <h1>Selectores</h1>
+  </header>
+
+  <main>
+
+    <article class="articulo">
+
+      <h2>Artículo 1</h2>
+      <p class="text-primary border">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi ducimus dolore distinctio? Dolorum labore
+        totam
+        eum! Quasi vero facere distinctio totam vitae esse? Laborum assumenda repellendus neque ea distinctio beatae.
+      </p>
+
+      <section>
+
+        <h3 id="titulo1">Sección 1</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur expedita, sint illum quidem blanditiis
+          ducimus odit! Incidunt consectetur numquam amet possimus consequuntur asperiores cumque eveniet ipsa quidem,
+          vel, obcaecati suscipit.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, laboriosam neque nihil, aut adipisci unde veritatis omnis autem non optio blanditiis saepe nulla ullam in distinctio voluptas consequatur totam repellat.</p>
+        
+        <section>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum sint officia accusamus porro tempora quidem ipsam? Tempore aspernatur ipsam ipsa maiores expedita modi, sint inventore. Neque nesciunt dolore laudantium.</p>
+        </section>
+
+      </section>
+
+
+      <button class="btn btn-primary btn-small border">Boton</button><!--El primer btn le da una un patron especifico y luego con las demas clases se va a ir modificando en especifico.-->
+        <button class="btn btn-danger btn-big border">Boton</button>
+        <button class="btn">Boton</button>
+
+    </article>
+
+    <article>
+
+      <h2 class="clase" id="identificador">Artículo 2</h2>
+      <p class="text-primary size-1"><!--No se crean dos clases, en la misma clase sin coma se crean los elementos-->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eveniet nam sequi, corrupti eaque ad rerum
+        soluta. Quisquam ea saepe praesentium, in natus possimus dolorum officia nemo, eius et fugiat?
+      </p>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https//:google.com" target="_blank" rel="nofollo noreferrer">google</a></li>
+      <li><a href="https//:getbootstrap.com" target="_blank" rel="nofollo noreferrer">Bootstrap</a></li>
+    </ul>
+
+    <p dir="rtl">
+      <a class="btn-top" href="#">Ir arriba</a>
+    </p>
+
+
+  </footer>
+
+</body>
+
+</html>
